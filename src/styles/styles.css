@@ -388,8 +388,8 @@ button {
   align-items: center;
   color: #fff;
   background:
-    linear-gradient(135deg, rgba(44, 62, 80, 0.72), rgba(44, 62, 80, 0.55)),
-    radial-gradient(ellipse at 20% 30%, rgba(212, 168, 83, 0.35), transparent 60%),
+    linear-gradient(135deg, rgba(44, 62, 80, 0.72), rgba(44, 62, 80, 0.45)),
+    url('/images/hero/twilight-entrance.jpg') center / cover no-repeat,
     linear-gradient(160deg, #2c3e50 0%, #3b556d 50%, #c4956a 100%);
   overflow: hidden;
   padding: 6rem 0 5rem;
@@ -399,9 +399,12 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 15% 85%, rgba(245, 240, 232, 0.12) 0, transparent 40%),
-    radial-gradient(circle at 85% 15%, rgba(212, 168, 83, 0.25) 0, transparent 45%);
+  background: linear-gradient(
+    180deg,
+    rgba(44, 62, 80, 0.15) 0%,
+    rgba(44, 62, 80, 0.05) 40%,
+    rgba(44, 62, 80, 0.55) 100%
+  );
   pointer-events: none;
 }
 
@@ -572,57 +575,105 @@ button {
 /* ---------- Gallery / Activities photo grid ---------- */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
 .photo-tile {
   border-radius: var(--radius-md);
   overflow: hidden;
+  background: var(--color-surface);
   box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.photo-placeholder {
-  aspect-ratio: 4 / 3;
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+.photo-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.photo-figure {
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  gap: 0.35rem;
-  position: relative;
 }
 
-.photo-placeholder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 30% 20%,
-    rgba(255, 255, 255, 0.18),
-    transparent 55%
-  );
-  pointer-events: none;
+.photo-figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.08) contrast(1.03);
+  transition: transform 0.4s ease;
 }
 
-.photo-placeholder.activities {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+.photo-tile:hover .photo-figure img {
+  transform: scale(1.03);
 }
 
-.photo-number {
+.photo-figure figcaption {
+  padding: 0.85rem 1rem 1rem;
   font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  opacity: 0.9;
+  font-size: 1rem;
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 1.3;
 }
 
-.photo-label {
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.02em;
+/* ---------- Home page gallery preview ---------- */
+.home-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.home-gallery-tile {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-gallery-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.home-gallery-tile img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.home-gallery-tile.wide img {
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 720px) {
+  .home-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  .home-gallery-tile.wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-ghost-dark:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
 }
 
 /* ---------- Contact page ---------- */

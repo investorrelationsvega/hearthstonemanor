@@ -68,6 +68,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title center">A Glimpse of Life at Hearthstone</h2>
+          <p className="section-sub center">
+            Nestled in a quiet Spanish Fork neighborhood with majestic mountain views.
+          </p>
+          <div className="home-gallery">
+            <figure className="home-gallery-tile wide">
+              <img
+                src="/images/gallery/01-porch-mountain-view.jpg"
+                alt="View of snow-capped Utah mountains from the Hearthstone Manor covered porch"
+                loading="lazy"
+              />
+            </figure>
+            <figure className="home-gallery-tile">
+              <img
+                src="/images/gallery/03-grand-fireplace.jpg"
+                alt="Grand stone fireplace in the Hearthstone Manor lobby"
+                loading="lazy"
+              />
+            </figure>
+            <figure className="home-gallery-tile">
+              <img
+                src="/images/gallery/06-sun-room.jpg"
+                alt="Bright sunlit dining room"
+                loading="lazy"
+              />
+            </figure>
+            <figure className="home-gallery-tile">
+              <img
+                src="/images/gallery/04-fireplace-lounge.jpg"
+                alt="Cozy fireside lounge with leather seating"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <p className="center" style={{ marginTop: '2rem' }}>
+            <Link to="/gallery" className="btn btn-ghost btn-ghost-dark">See the Full Gallery</Link>
+          </p>
+        </div>
+      </section>
+
       <section className="section cta-band">
         <div className="container center">
           <h2 className="section-title">Come visit and feel at home.</h2>
