@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 
 const links = [
@@ -14,6 +14,7 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
+  const hamburgerRef = useRef(null)
 
   useEffect(() => {
     setOpen(false)
@@ -26,6 +27,19 @@ export default function Navbar() {
     }
   }, [open])
 
+  // Close the mobile drawer on Escape key, return focus to the hamburger
+  useEffect(() => {
+    if (!open) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(false)
+        hamburgerRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [open])
+
   return (
     <header className="navbar">
       <div className="navbar-inner">
@@ -35,8 +49,10 @@ export default function Navbar() {
         </Link>
 
         <button
+          ref={hamburgerRef}
+          type="button"
           className={`hamburger ${open ? 'is-open' : ''}`}
-          aria-label="Toggle menu"
+          aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           aria-controls="primary-navigation"
           onClick={() => setOpen(!open)}

@@ -1,6 +1,6 @@
 const gallery = [
   // Welcome / exterior
-  { src: '/images/gallery/02-entrance-sign.jpg', label: 'Welcome to Hearthstone Manor' },
+  { src: '/images/hero/daylight-entrance.jpg', label: 'Welcome to Hearthstone Manor' },
   { src: '/images/gallery/01-porch-mountain-view.jpg', label: 'Mountain Views from the Porch' },
   { src: '/images/activities/12-front-entrance.jpg', label: 'Covered Front Entrance' },
 
