@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-col">
-          <h3 className="footer-heading">Hearthstone Manor</h3>
+          <span className="footer-brand">Hearthstone Manor</span>
           <p className="footer-tag">Rooted in care. Warm by nature.</p>
           <address className="footer-address">
             1424 S 1700 E<br />

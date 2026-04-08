@@ -30,11 +30,8 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="brand" aria-label="Hearthstone Manor home">
-          <span className="brand-mark" aria-hidden="true">H</span>
-          <span className="brand-text">
-            <span className="brand-name">Hearthstone Manor</span>
-            <span className="brand-tagline">Rooted in care. Warm by nature.</span>
-          </span>
+          <span className="brand-name">Hearthstone Manor</span>
+          <span className="brand-tagline">Rooted in care. Warm by nature.</span>
         </Link>
 
         <button
