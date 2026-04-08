@@ -43,7 +43,7 @@ export default function Home() {
         <div className="hero-content container">
           <p className="eyebrow">Rooted in care. Warm by nature.</p>
           <h1>
-            Welcome to <span className="script">Hearthstone</span>
+            Welcome to Hearthstone
             <br />
             Assisted Living and Memory Care
           </h1>
@@ -135,7 +135,7 @@ export default function Home() {
 
       <section className="section cta-band">
         <div className="container center">
-          <h2 className="section-title">Come Home to <span className="script">Hearthstone</span>.</h2>
+          <h2 className="section-title">Come Home to Hearthstone.</h2>
           <p className="section-sub">
             Schedule a tour today and see why families across Spanish Fork choose Hearthstone.
           </p>

@@ -58,7 +58,7 @@ export default function WhyHearthstone() {
     <>
       <section className="page-hero">
         <div className="container">
-          <h1>The <span className="script">Hearthstone</span> Advantage</h1>
+          <h1>The Hearthstone Advantage</h1>
           <p className="page-hero-sub">
             We believe we should be an extension of your home and deliver the same
             unique loving care you would provide for your mom, dad, or loved one. Our
