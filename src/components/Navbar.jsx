@@ -8,7 +8,6 @@ const links = [
   { to: '/assisted-living', label: 'Assisted Living' },
   { to: '/about', label: 'About Us' },
   { to: '/gallery', label: 'Gallery' },
-  { to: '/activities', label: 'Activities' },
   { to: '/contact', label: 'Contact' },
 ]
 
