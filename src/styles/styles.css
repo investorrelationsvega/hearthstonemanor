@@ -217,13 +217,32 @@ button {
 }
 
 .section-alt {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background: #eef2e6;  /* soft sage-linen — adds green breathing room */
+  border-top: 1px solid #dde3d3;
+  border-bottom: 1px solid #dde3d3;
 }
 
 .section-title {
   margin-bottom: 0.4em;
+  position: relative;
+}
+
+.section-title.center {
+  margin-bottom: 1.1em;
+}
+
+.section-title.center::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--color-sage);
+  border-radius: 2px;
+  margin: 0.85rem auto 0;
+}
+
+.cta-band .section-title.center::after {
+  background: var(--color-meadow);
 }
 
 .section-sub {
@@ -244,9 +263,9 @@ button {
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-meadow);
   margin-bottom: 1rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 /* ---------- Buttons ---------- */
@@ -313,7 +332,7 @@ button {
   left: 0;
   right: 0;
   height: var(--tour-bar-height);
-  background: var(--color-wood);
+  background: var(--color-primary);
   color: var(--color-text-inverse);
   z-index: 101;
   display: flex;
@@ -322,7 +341,7 @@ button {
   padding: 0 1.25rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid var(--color-wood);
 }
 
 .tour-bar-inner {
@@ -555,11 +574,11 @@ button {
   background:
     linear-gradient(
       135deg,
-      rgba(28, 49, 34, 0.6),
-      rgba(107, 78, 61, 0.4)
+      rgba(28, 49, 34, 0.58),
+      rgba(62, 96, 72, 0.42)
     ),
     url('/images/hero/daylight-entrance.jpg') center / cover no-repeat,
-    linear-gradient(160deg, #2d4a35 0%, #3e6048 50%, #6b4e3d 100%);
+    linear-gradient(160deg, #2d4a35 0%, #3e6048 55%, #7a9970 100%);
   overflow: hidden;
   padding: 6rem 0 5rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
@@ -571,9 +590,9 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(28, 49, 34, 0.35) 0%,
+    rgba(28, 49, 34, 0.4) 0%,
     rgba(28, 49, 34, 0.05) 40%,
-    rgba(28, 49, 34, 0.7) 100%
+    rgba(28, 49, 34, 0.72) 100%
   );
   pointer-events: none;
 }
@@ -621,7 +640,7 @@ button {
 }
 
 .service-card:hover {
-  border-color: var(--color-accent);
+  border-color: var(--color-sage);
   background: #fff;
   transform: translateY(-1px);
 }
@@ -732,7 +751,7 @@ button {
 /* ---------- CTA band (twilight homecoming) ---------- */
 .cta-band {
   background:
-    linear-gradient(135deg, rgba(28, 49, 34, 0.84), rgba(107, 78, 61, 0.78)),
+    linear-gradient(135deg, rgba(28, 49, 34, 0.86), rgba(45, 74, 53, 0.78)),
     url('/images/hero/twilight-entrance.jpg') center / cover no-repeat,
     linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: #fff;
