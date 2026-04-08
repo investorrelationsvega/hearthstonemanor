@@ -1,11 +1,14 @@
 /* =========================================================
    Hearthstone Manor — Global Styles
-   Brand palette (Sunlit Hearth):
-     Primary  (Deep Forest): #3A5A40
-     Accent   (Golden Honey): #DDA853
-     Secondary (Warm Tan):   #9B7C5C
-     Background (Warm Beige): #F4EADB
-     Text      (Soft Brown):  #4A3F35
+   Brand palette (Evergreen Manor):
+     Primary  (Deep Forest Pine): #1E3A2B
+     Accent   (Parchment Cream): #EFE5CE
+     Secondary (Muted Sage):     #6B8460
+     Background (Soft Cream):    #F7F0DF
+     Text      (Deep Olive):     #1F2419
+   Intentionally drops gold/honey accents to differentiate from the
+   generic "cool primary + warm gold" senior-care look (Beehive Homes,
+   etc.). Parchment-cream CTAs over deep-forest backgrounds instead.
    Typography:
      Brand script: Allura, cursive  (matches the stone sign)
      Headings:     Libre Caslon Text, serif
@@ -13,25 +16,26 @@
    ========================================================= */
 
 :root {
-  --color-primary: #3a5a40;            /* deep forest */
-  --color-primary-dark: #2a4430;
-  --color-primary-light: #547759;
-  --color-accent: #dda853;             /* golden honey */
-  --color-accent-dark: #b8873a;
-  --color-secondary: #9b7c5c;          /* warm tan */
-  --color-bg: #f4eadb;                 /* warm beige */
+  --color-primary: #1e3a2b;            /* deep forest pine */
+  --color-primary-dark: #132218;
+  --color-primary-light: #3b5940;      /* for gradients */
+  --color-accent: #efe5ce;             /* parchment cream */
+  --color-accent-dark: #d9cdb0;        /* cream hover */
+  --color-secondary: #6b8460;          /* muted sage */
+  --color-secondary-dark: #4f6649;
+  --color-bg: #f7f0df;                 /* soft cream */
   --color-surface: #fffdf8;            /* near-white */
-  --color-text: #4a3f35;               /* soft brown */
-  --color-muted: #685e52;      /* darkened for WCAG AA 4.5:1 on #f4eadb */
-  --color-border: #e5d8c2;
+  --color-text: #1f2419;               /* deep olive-black */
+  --color-muted: #5a5246;              /* WCAG AA 6.9:1 on #f7f0df */
+  --color-border: #e5dac2;
 
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
 
-  --shadow-sm: 0 1px 2px rgba(74, 63, 53, 0.08);
-  --shadow-md: 0 8px 24px rgba(74, 63, 53, 0.12);
-  --shadow-lg: 0 20px 48px rgba(74, 63, 53, 0.18);
+  --shadow-sm: 0 1px 2px rgba(31, 36, 25, 0.08);
+  --shadow-md: 0 8px 24px rgba(31, 36, 25, 0.12);
+  --shadow-lg: 0 20px 48px rgba(31, 36, 25, 0.2);
 
   --max-width: 1240px;
   --nav-height: 92px;
@@ -125,7 +129,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent-dark);
+  color: var(--color-secondary);
 }
 
 h1,
@@ -157,10 +161,16 @@ h3 {
   font-family: var(--font-script);
   font-weight: 400;
   color: var(--color-accent);
-  font-size: 1.2em;
+  font-size: 1.25em;
   line-height: 0.9;
   display: inline-block;
   padding: 0 0.05em;
+}
+
+/* Script accent on light backgrounds (section titles, etc.) */
+.section .script,
+.section-alt .script {
+  color: var(--color-primary);
 }
 
 p {
@@ -242,6 +252,7 @@ button {
   text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* ---------- Buttons ---------- */
@@ -258,29 +269,47 @@ button {
   line-height: 1.2;
 }
 
+/* Default: on light cream sections, the primary button is a deep
+   forest pill with cream text */
 .btn-primary {
-  background: var(--color-accent);
-  color: var(--color-primary);
-  border-color: var(--color-accent);
+  background: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   color: #fff;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 
+/* On dark-image backgrounds (hero, cta-band), invert: cream button
+   with forest text for maximum contrast */
+.hero .btn-primary,
+.cta-band .btn-primary {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+
+.hero .btn-primary:hover,
+.cta-band .btn-primary:hover {
+  background: #fff;
+  color: var(--color-primary-dark);
+  border-color: #fff;
+}
+
 .btn-ghost {
   background: transparent;
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 253, 248, 0.8);
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 253, 248, 0.12);
   color: #fff;
   border-color: #fff;
 }
@@ -382,13 +411,13 @@ button {
 }
 
 .nav-links a.active {
-  color: var(--color-accent-dark);
+  color: var(--color-secondary-dark);
 }
 
 .nav-cta {
-  background: var(--color-accent);
-  color: var(--color-primary) !important;
-  padding: 0.55rem 1.1rem !important;
+  background: var(--color-primary);
+  color: var(--color-accent) !important;
+  padding: 0.55rem 1.2rem !important;
   border-radius: var(--radius-md);
   font-weight: 600;
   white-space: nowrap;
@@ -399,7 +428,7 @@ button {
 }
 
 .nav-cta:hover {
-  background: var(--color-accent-dark);
+  background: var(--color-primary-dark);
   color: #fff !important;
 }
 
@@ -446,14 +475,14 @@ button {
   background:
     linear-gradient(
       135deg,
-      rgba(42, 68, 48, 0.62),
-      rgba(74, 63, 53, 0.48)
+      rgba(19, 34, 24, 0.62),
+      rgba(31, 36, 25, 0.48)
     ),
     url('/images/hero/daylight-entrance.jpg') center / cover no-repeat,
-    linear-gradient(160deg, #3a5a40 0%, #547759 50%, #9b7c5c 100%);
+    linear-gradient(160deg, #1e3a2b 0%, #3b5940 50%, #6b8460 100%);
   overflow: hidden;
   padding: 6rem 0 5rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .hero::before {
@@ -462,9 +491,9 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(74, 63, 53, 0.35) 0%,
-    rgba(74, 63, 53, 0.05) 40%,
-    rgba(74, 63, 53, 0.7) 100%
+    rgba(19, 34, 24, 0.35) 0%,
+    rgba(19, 34, 24, 0.05) 40%,
+    rgba(19, 34, 24, 0.7) 100%
   );
   pointer-events: none;
 }
@@ -521,7 +550,7 @@ button {
   flex-shrink: 0;
   width: 22px;
   height: 22px;
-  color: var(--color-accent-dark);
+  color: var(--color-secondary);
 }
 
 .service-label {
@@ -551,7 +580,7 @@ button {
   inset: 0;
   background: radial-gradient(
     ellipse at 80% 50%,
-    rgba(221, 168, 83, 0.25),
+    rgba(239, 229, 206, 0.14),
     transparent 60%
   );
   pointer-events: none;
@@ -582,7 +611,7 @@ button {
 .pillar {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 4px solid var(--color-accent);
+  border-top: 4px solid var(--color-secondary);
   border-radius: var(--radius-md);
   padding: 2rem 1.75rem;
   box-shadow: var(--shadow-sm);
@@ -600,7 +629,7 @@ button {
   display: grid;
   place-items: center;
   background: var(--color-bg);
-  color: var(--color-accent-dark);
+  color: var(--color-primary);
   border-radius: 50%;
   margin-bottom: 1.1rem;
 }
@@ -623,13 +652,14 @@ button {
 /* ---------- CTA band (twilight homecoming) ---------- */
 .cta-band {
   background:
-    linear-gradient(135deg, rgba(42, 68, 48, 0.82), rgba(74, 63, 53, 0.82)),
+    linear-gradient(135deg, rgba(19, 34, 24, 0.86), rgba(19, 34, 24, 0.78)),
     url('/images/hero/twilight-entrance.jpg') center / cover no-repeat,
     linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: #fff;
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .cta-band::before {
@@ -638,7 +668,7 @@ button {
   inset: 0;
   background: radial-gradient(
     ellipse at 50% 100%,
-    rgba(221, 168, 83, 0.25),
+    rgba(239, 229, 206, 0.18),
     transparent 65%
   );
   pointer-events: none;
@@ -824,8 +854,8 @@ button {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(221, 168, 83, 0.3);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30, 58, 43, 0.18);
 }
 
 .contact-form button {
@@ -875,7 +905,7 @@ button {
   inset: 0;
   background: radial-gradient(
     ellipse at 20% 0%,
-    rgba(221, 168, 83, 0.12),
+    rgba(239, 229, 206, 0.08),
     transparent 55%
   );
   pointer-events: none;
@@ -907,7 +937,7 @@ button {
 }
 
 .footer-tag {
-  color: #e8d5a8;
+  color: #c9d7bc;
   font-style: italic;
   margin-bottom: 0.8rem;
   font-size: 0.92rem;
@@ -916,7 +946,7 @@ button {
 .footer-address {
   font-style: normal;
   line-height: 1.7;
-  color: #d9cfbb;
+  color: #d5d0b8;
 }
 
 .footer-list {
@@ -924,11 +954,11 @@ button {
 }
 
 .footer-list a {
-  color: #d9cfbb;
+  color: #d5d0b8;
 }
 
 .footer-list a:hover {
-  color: var(--color-accent);
+  color: #fff;
 }
 
 .footer-bottom {
@@ -938,7 +968,7 @@ button {
   padding-top: 1.25rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #b6aa95;
+  color: #9ba690;
 }
 
 /* =========================================================
