@@ -133,4 +133,5 @@ To replace them with real photos:
 
 **Hearthstone Manor**
 1424 S 1700 E, Spanish Fork, UT 84660
-Phone & Tours: (801) 798-1500
+Facility: (801) 798-1500
+Tours: (801) 420-5196

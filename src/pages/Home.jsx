@@ -213,7 +213,7 @@ export default function Home() {
         <div className="container center">
           <h2 className="section-title">Come Home to Hearthstone.</h2>
           <p className="section-sub">
-            Schedule a tour today and see why families across Spanish Fork choose Hearthstone.
+            Schedule a tour and see why families trust us with the people they love most.
           </p>
           <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
         </div>

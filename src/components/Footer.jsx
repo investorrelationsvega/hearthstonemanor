@@ -17,12 +17,12 @@ export default function Footer() {
           <h3 className="footer-heading">Contact</h3>
           <ul className="footer-list">
             <li>
-              Phone:{' '}
+              Facility:{' '}
               <a href="tel:+18017981500">(801) 798-1500</a>
             </li>
             <li>
               Tours:{' '}
-              <a href="tel:+18017981500">(801) 798-1500</a>
+              <a href="tel:+18014205196">(801) 420-5196</a>
             </li>
           </ul>
         </div>
