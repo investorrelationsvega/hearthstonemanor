@@ -662,12 +662,13 @@ button {
   .services-list {
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(7, auto);
   }
 
-  /* Top border on the list catches the first row in both columns;
-     each item supplies its own bottom border. No vertical divider
-     between columns, keeping it quiet. */
+  /* 13 items split as 7 (left col) + 6 (right col). Top border on
+     the list catches the first row in both columns; each item
+     supplies its own bottom border. No vertical divider between
+     columns, keeping it quiet. */
 }
 
 /* ---------- Page hero (sub-pages) ---------- */

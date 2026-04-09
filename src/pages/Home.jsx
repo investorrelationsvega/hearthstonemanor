@@ -8,6 +8,7 @@ const services = [
   'Spacious walk-in showers',
   'Private kitchenette in every apartment',
   'Scenic mountain views from every apartment',
+  'Three home-cooked meals daily',
   'Cable TV in every room',
   'Daily housekeeping and trash removal',
   'Weekly fresh linens and laundry',
