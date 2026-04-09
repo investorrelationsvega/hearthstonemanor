@@ -17,12 +17,6 @@ export default function Contact() {
       <section className="section">
         <div className="container contact-grid">
           <div className="contact-info">
-            <h2>Visit Us</h2>
-            <address>
-              1424 S 1700 E<br />
-              Spanish Fork, UT 84660
-            </address>
-
             <h2>Get in Touch</h2>
             <ul className="contact-phones">
               <li>
@@ -57,7 +51,11 @@ export default function Contact() {
           </div>
 
           <div className="contact-map">
-            <h2>Find Us</h2>
+            <h2>Visit Us</h2>
+            <address className="visit-us-address">
+              1424 S 1700 E<br />
+              Spanish Fork, UT 84660
+            </address>
             <div className="map-wrap">
               <iframe
                 title="Hearthstone Manor Location"

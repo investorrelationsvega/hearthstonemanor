@@ -1280,6 +1280,13 @@ button {
   border-radius: var(--radius-md);
 }
 
+.visit-us-address {
+  font-style: normal;
+  line-height: 1.65;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
 .map-wrap {
   border-radius: var(--radius-md);
   overflow: hidden;
