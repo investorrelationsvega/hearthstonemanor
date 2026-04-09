@@ -19,10 +19,24 @@ export default function Footer() {
             <li>
               Facility:{' '}
               <a href="tel:+18017981500">(801) 798-1500</a>
+              {' '}&mdash;{' '}
+              <a
+                href="sms:+18017981500"
+                aria-label="Text the facility line at (801) 798-1500"
+              >
+                Text
+              </a>
             </li>
             <li>
               Tours:{' '}
               <a href="tel:+18014205196">(801) 420-5196</a>
+              {' '}&mdash;{' '}
+              <a
+                href="sms:+18014205196"
+                aria-label="Text the tours line at (801) 420-5196"
+              >
+                Text
+              </a>
             </li>
           </ul>
         </div>

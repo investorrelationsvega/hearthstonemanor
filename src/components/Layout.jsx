@@ -23,6 +23,13 @@ export default function Layout() {
             <a href="tel:+18017981500" className="tour-bar-phone">
               (801) 798-1500
             </a>
+            <a
+              href="sms:+18017981500"
+              className="tour-bar-text"
+              aria-label="Text the facility at (801) 798-1500"
+            >
+              Text us
+            </a>
           </span>
           <Link to="/contact" className="tour-bar-cta">
             Schedule a Tour

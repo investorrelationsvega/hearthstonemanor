@@ -380,6 +380,23 @@ button {
   text-decoration: underline;
 }
 
+.tour-bar-text {
+  color: var(--color-text-inverse);
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: rgba(247, 243, 236, 0.4);
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  margin-left: 0.4rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid rgba(247, 243, 236, 0.25);
+}
+
+.tour-bar-text:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
 .tour-bar-cta {
   background: var(--color-accent);
   color: var(--color-primary);
@@ -406,6 +423,10 @@ button {
   }
 
   .tour-bar-message strong {
+    display: none;
+  }
+
+  .tour-bar-text {
     display: none;
   }
 
