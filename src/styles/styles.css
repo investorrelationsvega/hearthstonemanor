@@ -260,12 +260,14 @@ button {
   display: inline-block;
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-meadow);
+  color: #fff;
   margin-bottom: 1rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.6),
+    0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------- Buttons ---------- */
@@ -442,11 +444,15 @@ button {
   top: var(--tour-bar-height);
   left: 0;
   right: 0;
-  background: rgba(247, 243, 236, 0.97);
-  backdrop-filter: saturate(150%) blur(10px);
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
   height: var(--nav-height);
+  /* NOTE: Do not add backdrop-filter here. backdrop-filter creates a
+     containing block for fixed-positioned descendants, which breaks
+     the mobile .nav-links drawer (its position: fixed starts
+     resolving inside the navbar's 84px box instead of the viewport,
+     collapsing the drawer to zero height). */
 }
 
 .navbar-inner {
@@ -489,10 +495,11 @@ button {
 
 .brand-tagline {
   font-family: var(--font-body);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-style: italic;
-  color: var(--color-sage);
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: 0.03em;
   margin-top: 0.2rem;
   white-space: nowrap;
 }

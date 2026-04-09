@@ -136,7 +136,7 @@ export default function Home() {
           <p className="eyebrow">Come Home to Hearthstone</p>
           <h1>Assisted Living &amp; Memory Care That Feels Like Home</h1>
           <p className="hero-sub">
-            Locally owned and all-inclusive, serving Spanish Fork and surrounding Utah County communities.
+            Locally owned and all-inclusive &mdash; welcoming families from Spanish Fork and anywhere you call home.
           </p>
           <div className="hero-actions">
             <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
