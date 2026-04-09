@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-col">
           <span className="footer-brand">Hearthstone Manor</span>
-          <p className="footer-tag">Come Home to the Hearth.</p>
+          <p className="footer-tag">Come Home to Hearthstone.</p>
           <address className="footer-address">
             1424 S 1700 E<br />
             Spanish Fork, UT 84660

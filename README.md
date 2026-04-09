@@ -2,7 +2,7 @@
 
 Website for **Hearthstone Manor Assisted Living and Memory Care** in Spanish Fork, Utah.
 
-> Come Home to the Hearth.
+> Come Home to Hearthstone.
 
 Built with React + Vite and deployed to Netlify.
 

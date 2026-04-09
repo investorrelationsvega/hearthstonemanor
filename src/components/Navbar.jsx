@@ -45,7 +45,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         <Link to="/" className="brand" aria-label="Hearthstone Manor home">
           <span className="brand-name">Hearthstone Manor</span>
-          <span className="brand-tagline">Come Home to the Hearth.</span>
+          <span className="brand-tagline">Come Home to Hearthstone.</span>
         </Link>
 
         <button

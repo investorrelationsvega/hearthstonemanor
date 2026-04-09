@@ -133,7 +133,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-overlay" />
         <div className="hero-content container">
-          <p className="eyebrow">Come Home to the Hearth</p>
+          <p className="eyebrow">Come Home to Hearthstone</p>
           <h1>
             Welcome to Hearthstone
             <br />
@@ -153,15 +153,17 @@ export default function Home() {
         <div className="container narrow">
           <h2 className="section-title center">A Home, Not a Facility</h2>
           <p className="lede">
-            As a locally owned assisted living facility, we are committed to
-            providing your loved one with exceptional individualized service at a
-            fair price. Like any good partnership, we believe in
-            straight-forward pricing without hidden fees or add-on costly
-            services. Our goal is to focus on world-class care, engaging
-            activities, and creating a home-style environment. As a small
-            community, all Hearthstone staff members build deep bonds and
-            friendships with each and every resident. This is what sets us
-            apart from other facilities.
+            Every hearth needs tending, and so does every life. At Hearthstone
+            Manor, we&rsquo;re a locally owned, close-knit community devoted to
+            giving your loved one the warmth, dignity, and care they deserve.
+            One straightforward price covers everything, because good care
+            shouldn&rsquo;t come with fine print.
+          </p>
+          <p className="lede">
+            Our staff build real friendships with every resident &mdash; the
+            kind that only grow in a place small enough to notice and warm
+            enough to matter. This isn&rsquo;t a facility. Come home to
+            Hearthstone.
           </p>
         </div>
       </section>
