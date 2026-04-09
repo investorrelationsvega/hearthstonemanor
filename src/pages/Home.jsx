@@ -1,20 +1,18 @@
 import { Link } from 'react-router-dom'
 
 const services = [
-  '24 Hr. trained and caring staff',
-  'Regular housekeeping and linen services',
-  'Large in-room showers',
-  'Kitchenettes available',
-  'Assistance with family video calls',
-  'Monthly wellness reviews',
-  'House physician available at all times',
-  'Cable in every room',
-  'Home health and hospice services available',
-  'Delicious meals including items from Traeger smoke grill',
-  'Daily maid service and trash removal',
-  'Beauty salon',
-  'Planned daily activities and entertainment',
-  'Scenic views from apartment',
+  'Trained caregivers around the clock',
+  'On-call house physician',
+  'Monthly wellness check-ins',
+  'Home health and hospice care',
+  'Spacious walk-in showers',
+  'Private kitchenette in every apartment',
+  'Scenic mountain views from every apartment',
+  'Cable TV in every room',
+  'Daily housekeeping and trash removal',
+  'Weekly fresh linens and laundry',
+  'On-site beauty salon',
+  'Daily activities and entertainment',
 ]
 
 export default function Home() {

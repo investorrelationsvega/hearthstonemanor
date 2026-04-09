@@ -661,11 +661,13 @@ button {
 @media (min-width: 720px) {
   .services-list {
     grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(6, auto);
   }
 
-  /* When two-column, the top border crosses both columns but each item
-     only needs its own bottom border — no vertical divider between
-     columns, which keeps it quiet */
+  /* Top border on the list catches the first row in both columns;
+     each item supplies its own bottom border. No vertical divider
+     between columns, keeping it quiet. */
 }
 
 /* ---------- Page hero (sub-pages) ---------- */
