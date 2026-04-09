@@ -2,7 +2,7 @@
 
 Website for **Hearthstone Manor Assisted Living and Memory Care** in Spanish Fork, Utah.
 
-> Rooted in care. Warm by nature.
+> Come Home to the Hearth.
 
 Built with React + Vite and deployed to Netlify.
 

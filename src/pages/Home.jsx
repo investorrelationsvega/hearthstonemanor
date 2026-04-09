@@ -133,7 +133,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-overlay" />
         <div className="hero-content container">
-          <p className="eyebrow">Rooted in care. Warm by nature.</p>
+          <p className="eyebrow">Come Home to the Hearth</p>
           <h1>
             Welcome to Hearthstone
             <br />
