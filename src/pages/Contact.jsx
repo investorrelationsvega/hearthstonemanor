@@ -55,12 +55,12 @@ export default function Contact() {
             <h2>Call Us</h2>
             <ul className="contact-list">
               <li>
-                <strong>Facility:</strong>{' '}
+                <strong>Phone:</strong>{' '}
                 <a href="tel:+18017981500">(801) 798-1500</a>
               </li>
               <li>
                 <strong>Tours:</strong>{' '}
-                <a href="tel:+18014205196">(801) 420-5196</a>
+                <a href="tel:+18017981500">(801) 798-1500</a>
               </li>
             </ul>
 

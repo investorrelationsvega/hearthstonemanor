@@ -20,8 +20,8 @@ export default function Layout() {
         <div className="tour-bar-inner">
           <span className="tour-bar-message">
             <strong>Schedule a tour:</strong>
-            <a href="tel:+18014205196" className="tour-bar-phone">
-              (801) 420-5196
+            <a href="tel:+18017981500" className="tour-bar-phone">
+              (801) 798-1500
             </a>
           </span>
           <Link to="/contact" className="tour-bar-cta">
