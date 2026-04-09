@@ -226,42 +226,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="get-in-touch" className="section section-alt">
+      <section id="get-in-touch" className="section cta-band">
         <div className="container">
-          <h2 className="section-title center">Get in Touch</h2>
-          <p className="section-sub center">
-            Call us, text us, email us, or send a message. We&rsquo;d love to hear from you.
-          </p>
+          <div className="center">
+            <h2 className="section-title">Come Home to Hearthstone.</h2>
+            <p className="section-sub">
+              Schedule a tour and see why families trust us with the people they love most.
+            </p>
+          </div>
 
-          <div className="contact-grid">
+          <div className="contact-grid contact-grid-dark">
             <div className="contact-info">
               <ul className="contact-phones">
                 <li>
-                  <span className="phone-label">Call us</span>
-                  <a className="phone-number" href="tel:+18017981500">
-                    (801) 798-1500
-                  </a>
-                  <a className="phone-number" href="tel:+18014205196">
-                    (801) 420-5196
-                  </a>
+                  <span className="phone-label">Call / Text Us</span>
+                  <div className="phone-row">
+                    <span className="phone-number">(801) 798-1500</span>
+                    <span className="phone-actions">
+                      <a href="tel:+18017981500" aria-label="Call (801) 798-1500">Call</a>
+                      <span aria-hidden="true">·</span>
+                      <a href="sms:+18017981500" aria-label="Text (801) 798-1500">Text</a>
+                    </span>
+                  </div>
+                  <div className="phone-row">
+                    <span className="phone-number">(801) 420-5196</span>
+                    <span className="phone-actions">
+                      <a href="tel:+18014205196" aria-label="Call (801) 420-5196">Call</a>
+                      <span aria-hidden="true">·</span>
+                      <a href="sms:+18014205196" aria-label="Text (801) 420-5196">Text</a>
+                    </span>
+                  </div>
                 </li>
                 <li>
-                  <span className="phone-label">Text us</span>
-                  <a className="phone-number" href="sms:+18017981500">
-                    (801) 798-1500
-                  </a>
-                  <a className="phone-number" href="sms:+18014205196">
-                    (801) 420-5196
-                  </a>
-                </li>
-                <li>
-                  <span className="phone-label">Email us</span>
+                  <span className="phone-label">Email Us</span>
                   <a className="phone-number" href="mailto:hsm.utah@gmail.com">
                     hsm.utah@gmail.com
                   </a>
                 </li>
                 <li>
-                  <span className="phone-label">Visit us</span>
+                  <span className="phone-label">Visit Us</span>
                   <address className="phone-number" style={{ fontStyle: 'normal' }}>
                     1424 S 1700 E<br />
                     Spanish Fork, UT 84660
@@ -274,16 +277,6 @@ export default function Home() {
               <ContactForm />
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section cta-band">
-        <div className="container center">
-          <h2 className="section-title">Come Home to Hearthstone.</h2>
-          <p className="section-sub">
-            Schedule a tour and see why families trust us with the people they love most.
-          </p>
-          <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
         </div>
       </section>
     </>

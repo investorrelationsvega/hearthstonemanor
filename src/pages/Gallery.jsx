@@ -3,6 +3,7 @@ const galleryGroups = [
     heading: 'Outdoor Spaces',
     items: [
       { src: '/images/hero/daylight-entrance.jpg', caption: 'Welcome to Hearthstone Manor' },
+      { src: '/images/hero/twilight-entrance.jpg', caption: 'Twilight at the front entrance' },
       { src: '/images/gallery/01-porch-mountain-view.jpg', caption: 'Mountain views from the covered porch' },
       { src: '/images/activities/12-front-entrance.jpg', caption: 'Covered front entrance' },
       { src: '/images/gallery/08-covered-porch.jpg', caption: 'Front porch in the afternoon light' },

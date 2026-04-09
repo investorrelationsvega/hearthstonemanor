@@ -17,25 +17,26 @@ export default function Footer() {
           <h3 className="footer-heading">Get in Touch</h3>
           <ul className="footer-phones">
             <li>
-              <span className="phone-label">Call us</span>
-              <a className="phone-number" href="tel:+18017981500">
-                (801) 798-1500
-              </a>
-              <a className="phone-number" href="tel:+18014205196">
-                (801) 420-5196
-              </a>
+              <span className="phone-label">Call / Text Us</span>
+              <div className="phone-row">
+                <span className="phone-number">(801) 798-1500</span>
+                <span className="phone-actions">
+                  <a href="tel:+18017981500" aria-label="Call (801) 798-1500">Call</a>
+                  <span aria-hidden="true">·</span>
+                  <a href="sms:+18017981500" aria-label="Text (801) 798-1500">Text</a>
+                </span>
+              </div>
+              <div className="phone-row">
+                <span className="phone-number">(801) 420-5196</span>
+                <span className="phone-actions">
+                  <a href="tel:+18014205196" aria-label="Call (801) 420-5196">Call</a>
+                  <span aria-hidden="true">·</span>
+                  <a href="sms:+18014205196" aria-label="Text (801) 420-5196">Text</a>
+                </span>
+              </div>
             </li>
             <li>
-              <span className="phone-label">Text us</span>
-              <a className="phone-number" href="sms:+18017981500">
-                (801) 798-1500
-              </a>
-              <a className="phone-number" href="sms:+18014205196">
-                (801) 420-5196
-              </a>
-            </li>
-            <li>
-              <span className="phone-label">Email us</span>
+              <span className="phone-label">Email Us</span>
               <a className="phone-number" href="mailto:hsm.utah@gmail.com">
                 hsm.utah@gmail.com
               </a>

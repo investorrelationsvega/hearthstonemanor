@@ -774,28 +774,30 @@ button {
      .services-feature — keeps the grid symmetrical. */
 }
 
-/* Standalone centered row that sits beneath the services grid. */
+/* Standalone row that sits beneath the services grid. Styled to
+   look exactly like a sibling .services-item (same icon, padding,
+   typography, bottom hairline) but horizontally centered via
+   margin: 0 auto and capped at ~one-column width so it reads as a
+   13th balanced row centered between the two columns above. */
 .services-feature {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
-  max-width: 920px;
-  margin: 1.75rem auto 0;
-  padding: 1rem 1.5rem;
+  max-width: 446px;
+  margin: 0 auto;
+  padding: 0.95rem 0.25rem;
+  border-bottom: 1px solid rgba(122, 153, 112, 0.35);
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--color-primary);
-  text-align: center;
-  border-top: 1px solid rgba(122, 153, 112, 0.35);
+  font-size: 1.02rem;
+  color: var(--color-text);
+  line-height: 1.45;
 }
 
 .services-feature .services-icon {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  color: var(--color-sage);
+  width: 22px;
+  height: 22px;
+  color: var(--color-primary);
 }
 
 /* ---------- Page hero (sub-pages) ---------- */
@@ -896,6 +898,10 @@ button {
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
+}
+
+.cta-band > .container > .center > h2,
+.cta-band > .container > .center > p {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
@@ -934,11 +940,11 @@ button {
 }
 
 /* ---------- Gallery ----------
-   CSS-columns masonry. Groups of images flow top-to-bottom in 1/2/3
-   columns based on viewport. Each image is a <figure> with a hidden
-   caption that fades in as an overlay on hover or keyboard focus
-   (no persistent labels — photography carries the weight). Groups
-   have a small understated heading above. */
+   Uniform CSS Grid with a fixed 3:2 aspect ratio per tile. Photos
+   are cropped to fill (object-fit: cover) so rows always line up
+   cleanly. 1 / 2 / 3 columns responsive. Grouped sections each get
+   a small understated heading. Captions are hover/focus-only
+   overlays — no persistent labels. */
 .gallery-group {
   margin-bottom: 3.5rem;
 }
@@ -955,7 +961,7 @@ button {
   text-transform: uppercase;
   color: var(--color-sage);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   padding-bottom: 0.75rem;
   position: relative;
 }
@@ -972,32 +978,35 @@ button {
 }
 
 .gallery-grid {
-  column-count: 1;
-  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 @media (min-width: 640px) {
   .gallery-grid {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .gallery-grid {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 }
 
 .gallery-item {
   position: relative;
-  margin: 0 0 1rem;
-  break-inside: avoid;
+  margin: 0;
   overflow: hidden;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   cursor: pointer;
   outline: none;
   transition: box-shadow 0.3s ease;
+  aspect-ratio: 3 / 2;
 }
 
 .gallery-item:hover,
@@ -1008,7 +1017,9 @@ button {
 .gallery-item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   filter: saturate(1.06) contrast(1.02);
   transition: transform 0.6s ease;
 }
@@ -1406,6 +1417,38 @@ a.phone-number:hover {
   text-decoration-color: currentColor;
 }
 
+/* Call / Text row: number on one line, Call · Text actions beside
+   (or below on very narrow widths). */
+.phone-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.1rem;
+}
+
+.phone-row .phone-number {
+  margin: 0;
+}
+
+.phone-actions {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.phone-actions a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.phone-actions > span[aria-hidden] {
+  opacity: 0.55;
+  user-select: none;
+}
+
 /* Footer-specific tints (dark green background) */
 .footer .phone-label {
   color: var(--color-meadow);
@@ -1421,7 +1464,7 @@ a.phone-number:hover {
   color: var(--color-accent);
 }
 
-/* Contact page + Home Get in Touch section (light linen background) */
+/* Contact page (light linen background) */
 .contact-info .phone-label {
   color: var(--color-sage);
 }
@@ -1433,6 +1476,77 @@ a.phone-number:hover {
 
 .contact-info a.phone-number:hover {
   color: var(--color-accent-dark);
+}
+
+.contact-info .phone-actions a {
+  color: var(--color-primary);
+}
+
+.contact-info .phone-actions a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* ---------- Dark variant: Home combined CTA + Get in Touch section ----------
+   When the contact-grid sits inside .cta-band (twilight photo bg),
+   the form inputs, labels, and phone info all need light-on-dark
+   styling. The .contact-grid-dark class applies these overrides. */
+.cta-band .contact-grid {
+  margin-top: 2.75rem;
+  text-shadow: none;
+}
+
+.cta-band .contact-info .phone-label {
+  color: var(--color-meadow);
+  opacity: 1;
+}
+
+.cta-band .contact-info a.phone-number,
+.cta-band .contact-info .phone-number,
+.cta-band .contact-info address.phone-number {
+  color: #fff;
+}
+
+.cta-band .contact-info a.phone-number:hover {
+  color: var(--color-accent);
+}
+
+.cta-band .contact-info .phone-actions a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+}
+
+.cta-band .contact-info .phone-actions a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.cta-band .contact-form label span {
+  color: rgba(255, 253, 248, 0.92);
+}
+
+.cta-band .contact-form input,
+.cta-band .contact-form textarea {
+  background: rgba(247, 243, 236, 0.08);
+  border: 1px solid rgba(247, 243, 236, 0.3);
+  color: #fff;
+}
+
+.cta-band .contact-form input::placeholder,
+.cta-band .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cta-band .contact-form input:focus,
+.cta-band .contact-form textarea:focus {
+  background: rgba(247, 243, 236, 0.14);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(200, 169, 110, 0.3);
+}
+
+.cta-band .form-success {
+  background: rgba(247, 243, 236, 0.1);
+  border: 1px solid rgba(247, 243, 236, 0.3);
+  color: #fff;
 }
 
 .footer-bottom {
