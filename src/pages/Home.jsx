@@ -134,13 +134,9 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-content container">
           <p className="eyebrow">Come Home to Hearthstone</p>
-          <h1>
-            Welcome to Hearthstone
-            <br />
-            Assisted Living and Memory Care
-          </h1>
+          <h1>Assisted Living &amp; Memory Care That Feels Like Home</h1>
           <p className="hero-sub">
-            Affordable Senior Care in Spanish Fork and the Surrounding Communities
+            Locally owned and all-inclusive, serving Spanish Fork and surrounding Utah County communities.
           </p>
           <div className="hero-actions">
             <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
