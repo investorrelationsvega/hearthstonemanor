@@ -19,7 +19,7 @@ export default function AssistedLiving() {
             to decorate it to make your loved one feel at home. Our goal is to provide
             world-class service and to attend to your loved one&rsquo;s daily needs. We
             promise to provide your loved one with the individual attention they
-            deserve. Hearthstone truly provides that home-style feel &mdash; we are
+            deserve. Hearthstone truly provides that home-style feel. We are
             nestled in a quiet neighborhood, surrounded by majestic mountains. We
             provide stimulating activities and partner with local church volunteers to
             offer religious meetings and programs. Please contact us to schedule a

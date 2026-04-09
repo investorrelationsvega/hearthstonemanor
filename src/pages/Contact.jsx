@@ -1,36 +1,6 @@
-import { useState } from 'react'
+import ContactForm from '../components/ContactForm.jsx'
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false)
-
-  // Netlify Forms: submit via fetch so we can show a nice confirmation
-  // while still using Netlify's server-side capture (form is declared
-  // statically with data-netlify and the hidden form-name input).
-  const encode = (data) =>
-    Object.keys(data)
-      .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
-      .join('&')
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    const data = {
-      'form-name': 'contact',
-      name: form.name.value,
-      phone: form.phone.value,
-      email: form.email.value,
-      message: form.message.value,
-    }
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(data),
-    })
-      .then(() => setSubmitted(true))
-      .catch(() => setSubmitted(true))
-  }
-
   return (
     <>
       <section className="page-hero">
@@ -52,94 +22,36 @@ export default function Contact() {
               Spanish Fork, UT 84660
             </address>
 
-            <h2>Call or Text Us</h2>
+            <h2>Get in Touch</h2>
             <ul className="contact-phones">
               <li>
-                <span className="phone-label">Facility</span>
-                <span className="phone-number">(801) 798-1500</span>
-                <span className="phone-actions">
-                  <a
-                    href="tel:+18017981500"
-                    aria-label="Call the facility line at (801) 798-1500"
-                  >
-                    Call us
-                  </a>
-                  <span className="phone-sep" aria-hidden="true">·</span>
-                  <a
-                    href="sms:+18017981500"
-                    aria-label="Text the facility line at (801) 798-1500"
-                  >
-                    Text us
-                  </a>
-                </span>
+                <span className="phone-label">Call us</span>
+                <a className="phone-number" href="tel:+18017981500">
+                  (801) 798-1500
+                </a>
+                <a className="phone-number" href="tel:+18014205196">
+                  (801) 420-5196
+                </a>
               </li>
               <li>
-                <span className="phone-label">Tours</span>
-                <span className="phone-number">(801) 420-5196</span>
-                <span className="phone-actions">
-                  <a
-                    href="tel:+18014205196"
-                    aria-label="Call the tours line at (801) 420-5196"
-                  >
-                    Call us
-                  </a>
-                  <span className="phone-sep" aria-hidden="true">·</span>
-                  <a
-                    href="sms:+18014205196"
-                    aria-label="Text the tours line at (801) 420-5196"
-                  >
-                    Text us
-                  </a>
-                </span>
+                <span className="phone-label">Text us</span>
+                <a className="phone-number" href="sms:+18017981500">
+                  (801) 798-1500
+                </a>
+                <a className="phone-number" href="sms:+18014205196">
+                  (801) 420-5196
+                </a>
+              </li>
+              <li>
+                <span className="phone-label">Email us</span>
+                <a className="phone-number" href="mailto:hsm.utah@gmail.com">
+                  hsm.utah@gmail.com
+                </a>
               </li>
             </ul>
 
             <h2>Send a Message</h2>
-            {submitted ? (
-              <div className="form-success" role="status">
-                <strong>Thank you!</strong> Your message has been received. We&rsquo;ll
-                be in touch shortly.
-              </div>
-            ) : (
-              <form
-                className="contact-form"
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-              >
-                {/* Netlify needs these hidden fields */}
-                <input type="hidden" name="form-name" value="contact" />
-                <p className="hp-field">
-                  <label>
-                    Don&rsquo;t fill this out: <input name="bot-field" />
-                  </label>
-                </p>
-
-                <label>
-                  <span>Name</span>
-                  <input type="text" name="name" required autoComplete="name" />
-                </label>
-
-                <label>
-                  <span>Phone</span>
-                  <input type="tel" name="phone" required autoComplete="tel" />
-                </label>
-
-                <label>
-                  <span>Email</span>
-                  <input type="email" name="email" required autoComplete="email" />
-                </label>
-
-                <label>
-                  <span>Message</span>
-                  <textarea name="message" rows="5" required></textarea>
-                </label>
-
-                <button type="submit" className="btn btn-primary">Send Message</button>
-              </form>
-            )}
+            <ContactForm />
           </div>
 
           <div className="contact-map">

@@ -57,9 +57,28 @@ export default function Navbar() {
           aria-controls="primary-navigation"
           onClick={() => setOpen(!open)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="hamburger-icon">
+            {/* Three bars — the default "closed" state */}
+            <svg
+              className="hamburger-svg hamburger-svg-menu"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="7" x2="20" y2="7" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="17" x2="20" y2="17" />
+            </svg>
+            {/* Little house — the "open" state */}
+            <svg
+              className="hamburger-svg hamburger-svg-house"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M3 11 L12 3 L21 11 L21 21 L3 21 Z" />
+              <path d="M10 21 L10 15 L14 15 L14 21" />
+            </svg>
+          </span>
+          <span className="hamburger-label">Menu</span>
         </button>
 
         <nav

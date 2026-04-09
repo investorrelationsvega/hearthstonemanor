@@ -14,45 +14,31 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h3 className="footer-heading">Contact</h3>
+          <h3 className="footer-heading">Get in Touch</h3>
           <ul className="footer-phones">
             <li>
-              <span className="phone-label">Facility</span>
-              <span className="phone-number">(801) 798-1500</span>
-              <span className="phone-actions">
-                <a
-                  href="tel:+18017981500"
-                  aria-label="Call the facility line at (801) 798-1500"
-                >
-                  Call us
-                </a>
-                <span className="phone-sep" aria-hidden="true">·</span>
-                <a
-                  href="sms:+18017981500"
-                  aria-label="Text the facility line at (801) 798-1500"
-                >
-                  Text us
-                </a>
-              </span>
+              <span className="phone-label">Call us</span>
+              <a className="phone-number" href="tel:+18017981500">
+                (801) 798-1500
+              </a>
+              <a className="phone-number" href="tel:+18014205196">
+                (801) 420-5196
+              </a>
             </li>
             <li>
-              <span className="phone-label">Tours</span>
-              <span className="phone-number">(801) 420-5196</span>
-              <span className="phone-actions">
-                <a
-                  href="tel:+18014205196"
-                  aria-label="Call the tours line at (801) 420-5196"
-                >
-                  Call us
-                </a>
-                <span className="phone-sep" aria-hidden="true">·</span>
-                <a
-                  href="sms:+18014205196"
-                  aria-label="Text the tours line at (801) 420-5196"
-                >
-                  Text us
-                </a>
-              </span>
+              <span className="phone-label">Text us</span>
+              <a className="phone-number" href="sms:+18017981500">
+                (801) 798-1500
+              </a>
+              <a className="phone-number" href="sms:+18014205196">
+                (801) 420-5196
+              </a>
+            </li>
+            <li>
+              <span className="phone-label">Email us</span>
+              <a className="phone-number" href="mailto:hsm.utah@gmail.com">
+                hsm.utah@gmail.com
+              </a>
             </li>
           </ul>
         </div>

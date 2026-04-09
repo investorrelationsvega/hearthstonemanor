@@ -43,7 +43,7 @@ export default function Gallery() {
         <div className="container">
           <h1>Gallery</h1>
           <p className="page-hero-sub">
-            Take a look inside our home &mdash; warm, welcoming, and designed with
+            Take a look inside our home. Warm, welcoming, and designed with
             comfort in mind.
           </p>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Slideshow from '../components/Slideshow.jsx'
+import ContactForm from '../components/ContactForm.jsx'
 
 const slideshowSlides = [
   { src: '/images/gallery/01-porch-mountain-view.jpg', alt: 'View of snow-capped Utah mountains framed by the Hearthstone Manor covered porch' },
@@ -62,10 +63,6 @@ const services = [
         <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
       </>
     ),
-  },
-  {
-    label: 'Scenic mountain views from every apartment',
-    icon: <path d="m8 3 4 8 5-5 5 15H2L8 3z" />,
   },
   {
     label: 'Three home-cooked meals daily',
@@ -131,16 +128,26 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="hero-overlay" />
-        <div className="hero-content container">
-          <p className="eyebrow">Come Home to Hearthstone</p>
-          <h1>Assisted Living &amp; Memory Care That Feels Like Home</h1>
-          <p className="hero-sub">
-            Locally owned and all-inclusive &mdash; welcoming families from Spanish Fork and anywhere you call home.
-          </p>
-          <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
-            <Link to="/why-hearthstone" className="btn btn-ghost">Why Hearthstone</Link>
+        <div className="hero-frame">
+          <img
+            className="hero-image"
+            src="/images/hero/daylight-entrance.jpg"
+            alt="Hearthstone Manor front entrance with stone sign, flagpole, and mountain backdrop"
+            fetchpriority="high"
+          />
+          <div className="hero-overlay" />
+          <div className="hero-content">
+            <div className="container">
+              <p className="eyebrow">Come Home to Hearthstone</p>
+              <h1>Assisted Living &amp; Memory Care That Feels Like Home</h1>
+              <p className="hero-sub">
+                Locally owned and all-inclusive. Welcoming families from Spanish Fork and anywhere you call home.
+              </p>
+              <div className="hero-actions">
+                <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
+                <Link to="/why-hearthstone" className="btn btn-ghost">Why Hearthstone</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -156,10 +163,9 @@ export default function Home() {
             shouldn&rsquo;t come with fine print.
           </p>
           <p className="lede">
-            Our staff build real friendships with every resident &mdash; the
-            kind that only grow in a place small enough to notice and warm
-            enough to matter. This isn&rsquo;t a facility. Come home to
-            Hearthstone.
+            Our staff build real friendships with every resident, the kind
+            that only grow in a place small enough to notice and warm enough
+            to matter. This isn&rsquo;t a facility. Come home to Hearthstone.
           </p>
         </div>
       </section>
@@ -189,6 +195,21 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <div className="services-feature">
+            <svg
+              className="services-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+            </svg>
+            <span>Scenic mountain views from every apartment</span>
+          </div>
         </div>
       </section>
 
@@ -202,6 +223,57 @@ export default function Home() {
           <p className="center" style={{ marginTop: '1.75rem' }}>
             <Link to="/gallery" className="btn btn-ghost btn-ghost-dark">See the Full Gallery</Link>
           </p>
+        </div>
+      </section>
+
+      <section id="get-in-touch" className="section section-alt">
+        <div className="container">
+          <h2 className="section-title center">Get in Touch</h2>
+          <p className="section-sub center">
+            Call us, text us, email us, or send a message. We&rsquo;d love to hear from you.
+          </p>
+
+          <div className="contact-grid">
+            <div className="contact-info">
+              <ul className="contact-phones">
+                <li>
+                  <span className="phone-label">Call us</span>
+                  <a className="phone-number" href="tel:+18017981500">
+                    (801) 798-1500
+                  </a>
+                  <a className="phone-number" href="tel:+18014205196">
+                    (801) 420-5196
+                  </a>
+                </li>
+                <li>
+                  <span className="phone-label">Text us</span>
+                  <a className="phone-number" href="sms:+18017981500">
+                    (801) 798-1500
+                  </a>
+                  <a className="phone-number" href="sms:+18014205196">
+                    (801) 420-5196
+                  </a>
+                </li>
+                <li>
+                  <span className="phone-label">Email us</span>
+                  <a className="phone-number" href="mailto:hsm.utah@gmail.com">
+                    hsm.utah@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <span className="phone-label">Visit us</span>
+                  <address className="phone-number" style={{ fontStyle: 'normal' }}>
+                    1424 S 1700 E<br />
+                    Spanish Fork, UT 84660
+                  </address>
+                </li>
+              </ul>
+            </div>
+
+            <div className="contact-form-wrap">
+              <ContactForm />
+            </div>
+          </div>
         </div>
       </section>
 
