@@ -620,44 +620,52 @@ button {
   gap: 1rem;
 }
 
-/* ---------- Services grid (Home) ---------- */
-.services-grid {
+/* ---------- Services list (Home) ----------
+   Clean two-column amenities list. Thin sage hairline dividers,
+   small sage dot marker, Spectral body type, no cards, no hover
+   transforms. Lets the typography carry the section. */
+.services-list {
+  margin: 2.5rem auto 0;
+  max-width: 920px;
+  padding: 0;
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0.75rem;
-  margin-top: 2.5rem;
+  grid-template-columns: 1fr;
+  column-gap: 3rem;
+  border-top: 1px solid rgba(122, 153, 112, 0.35);
 }
 
-.service-card {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 1rem 1.25rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-}
-
-.service-card:hover {
-  border-color: var(--color-sage);
-  background: #fff;
-  transform: translateY(-1px);
-}
-
-.service-mark {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  color: var(--color-sage);
-}
-
-.service-label {
+.services-item {
+  padding: 0.95rem 0.25rem;
+  border-bottom: 1px solid rgba(122, 153, 112, 0.35);
   font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.98rem;
-  line-height: 1.4;
+  font-size: 1.02rem;
   color: var(--color-text);
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.services-item::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  margin-top: 0.55rem;
+}
+
+@media (min-width: 720px) {
+  .services-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* When two-column, the top border crosses both columns but each item
+     only needs its own bottom border — no vertical divider between
+     columns, which keeps it quiet */
 }
 
 /* ---------- Page hero (sub-pages) ---------- */
@@ -1125,11 +1133,6 @@ button {
     width: 100%;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 0.65rem;
-  }
-
   .photo-grid {
     grid-template-columns: 1fr;
   }
@@ -1173,10 +1176,6 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .home-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1212,10 +1211,6 @@ button {
 
 /* ---------- Small desktops / iPad landscape (>= 1024px) ---------- */
 @media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .photo-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1232,10 +1227,6 @@ button {
 @media (min-width: 1280px) {
   .container {
     padding: 0 2rem;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1312,7 +1303,6 @@ button {
 
 /* ---------- Touch devices: hover doesn't stick ---------- */
 @media (hover: none) {
-  .service-card:hover,
   .pillar:hover,
   .photo-tile:hover,
   .home-gallery-tile:hover {

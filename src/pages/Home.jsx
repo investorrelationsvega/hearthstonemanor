@@ -17,24 +17,6 @@ const services = [
   'Scenic views from apartment',
 ]
 
-function LeafMark() {
-  return (
-    <svg
-      className="service-mark"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2.96a1 1 0 0 1 1.8.82c-.4 1.42-.8 3.66-.8 5.22 0 7.2-5.7 11-9.2 11-3.02 0-5.5-2.5-5.5-5.5" />
-      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-    </svg>
-  )
-}
-
 export default function Home() {
   return (
     <>
@@ -80,11 +62,10 @@ export default function Home() {
           <p className="section-sub center">
             One straightforward price covers everything your loved one needs.
           </p>
-          <ul className="services-grid">
+          <ul className="services-list">
             {services.map((label) => (
-              <li key={label} className="service-card">
-                <LeafMark />
-                <span className="service-label">{label}</span>
+              <li key={label} className="services-item">
+                <span>{label}</span>
               </li>
             ))}
           </ul>
