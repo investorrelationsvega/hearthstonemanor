@@ -60,10 +60,10 @@ export default function WhyHearthstone() {
         <div className="container">
           <h1>The Hearthstone Advantage</h1>
           <p className="page-hero-sub">
-            We believe we should be an extension of your home and deliver the same
-            unique loving care you would provide for your mom, dad, or loved one. Our
-            goal is to make a personal connection with each of our residents and to
-            lift their spirits.
+            Choosing the right assisted living or memory care community is one
+            of the most important decisions your family will make. At
+            Hearthstone Manor, we&rsquo;ve built everything around one idea:
+            your loved one deserves to feel at home.
           </p>
         </div>
       </section>
@@ -77,12 +77,9 @@ export default function WhyHearthstone() {
               </div>
               <h2>Individual Care</h2>
               <p>
-                Our vision is to treat you like we would treat our own family. That
-                includes quickly responding to your calls, understanding your routines,
-                and providing a clean and comfortable environment. We offer exercise
-                classes to get the body moving and to mingle with other residents.
-                Cleaning and laundry services provided weekly or more frequently as
-                needed.
+                Here, care is personal. Our staff gets to know each resident,
+                their routines, their preferences, and the little things that
+                make them feel comfortable and loved.
               </p>
             </article>
 
@@ -90,14 +87,14 @@ export default function WhyHearthstone() {
               <div className="pillar-icon" aria-hidden="true">
                 <HandsIcon />
               </div>
-              <h2>Staff Support</h2>
+              <h2>Dedicated Staff</h2>
               <p>
-                At Hearthstone Manor, we believe the best resident experience comes
-                from having our staff focus on what they do best. CNAs focus on daily
-                needs, kitchen staff focus on the dining experience, and the Activities
-                Director focuses on fun. The Administrator and Owner is actively
-                engaged and available to residents and their families, even
-                after-hours and weekends.
+                Great care happens when everyone on the team can focus on what
+                they do best. CNAs are devoted to personal daily care. Our
+                kitchen team is focused on nourishing, enjoyable meals. Our
+                Activities Director keeps life full and fun. Residents and
+                families can count on attentive, around-the-clock care and
+                support.
               </p>
             </article>
 
@@ -105,10 +102,13 @@ export default function WhyHearthstone() {
               <div className="pillar-icon" aria-hidden="true">
                 <TagIcon />
               </div>
-              <h2>Straight Forward Pricing</h2>
+              <h2>Transparent Pricing</h2>
               <p>
-                With our competitive pricing on our all-inclusive services, you will
-                always know what you are paying. Medicaid New Choice Waiver Accepted.
+                No surprises. Our all-inclusive pricing covers the care and
+                services your loved one needs, so you always know what to
+                expect. We accept Medicaid New Choice Waiver and are happy to
+                walk you through costs and what&rsquo;s included before you
+                ever commit to anything.
               </p>
             </article>
           </div>

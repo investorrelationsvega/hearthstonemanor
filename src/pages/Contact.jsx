@@ -7,8 +7,9 @@ export default function Contact() {
         <div className="container">
           <h1>Contact Hearthstone Manor</h1>
           <p className="page-hero-sub">
-            We&rsquo;d love to hear from you. Call us, send a message, or schedule a
-            tour to see our home in person.
+            We know this is a big decision, and we&rsquo;re here to help.
+            Whether you have questions, want to see the facility, or just need
+            to talk through your options, reach out any way that works for you.
           </p>
         </div>
       </section>
