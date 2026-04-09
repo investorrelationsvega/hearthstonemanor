@@ -53,28 +53,44 @@ export default function Contact() {
             </address>
 
             <h2>Call or Text Us</h2>
-            <ul className="contact-list">
+            <ul className="contact-phones">
               <li>
-                <strong>Facility:</strong>{' '}
-                <a href="tel:+18017981500">(801) 798-1500</a>
-                {' '}&mdash;{' '}
-                <a
-                  href="sms:+18017981500"
-                  aria-label="Text the facility line at (801) 798-1500"
-                >
-                  Text
-                </a>
+                <span className="phone-label">Facility</span>
+                <span className="phone-number">(801) 798-1500</span>
+                <span className="phone-actions">
+                  <a
+                    href="tel:+18017981500"
+                    aria-label="Call the facility line at (801) 798-1500"
+                  >
+                    Call us
+                  </a>
+                  <span className="phone-sep" aria-hidden="true">·</span>
+                  <a
+                    href="sms:+18017981500"
+                    aria-label="Text the facility line at (801) 798-1500"
+                  >
+                    Text us
+                  </a>
+                </span>
               </li>
               <li>
-                <strong>Tours:</strong>{' '}
-                <a href="tel:+18014205196">(801) 420-5196</a>
-                {' '}&mdash;{' '}
-                <a
-                  href="sms:+18014205196"
-                  aria-label="Text the tours line at (801) 420-5196"
-                >
-                  Text
-                </a>
+                <span className="phone-label">Tours</span>
+                <span className="phone-number">(801) 420-5196</span>
+                <span className="phone-actions">
+                  <a
+                    href="tel:+18014205196"
+                    aria-label="Call the tours line at (801) 420-5196"
+                  >
+                    Call us
+                  </a>
+                  <span className="phone-sep" aria-hidden="true">·</span>
+                  <a
+                    href="sms:+18014205196"
+                    aria-label="Text the tours line at (801) 420-5196"
+                  >
+                    Text us
+                  </a>
+                </span>
               </li>
             </ul>
 

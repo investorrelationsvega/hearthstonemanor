@@ -368,33 +368,29 @@ button {
   opacity: 0.9;
 }
 
-.tour-bar-phone {
+.tour-bar-number {
   color: var(--color-accent);
   font-weight: 500;
-  text-decoration: none;
   white-space: nowrap;
 }
 
-.tour-bar-phone:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.tour-bar-text {
+.tour-bar-action {
   color: var(--color-text-inverse);
   font-weight: 400;
   text-decoration: underline;
-  text-decoration-color: rgba(247, 243, 236, 0.4);
+  text-decoration-color: rgba(247, 243, 236, 0.45);
   text-underline-offset: 3px;
   white-space: nowrap;
-  margin-left: 0.4rem;
-  padding-left: 0.6rem;
-  border-left: 1px solid rgba(247, 243, 236, 0.25);
 }
 
-.tour-bar-text:hover {
+.tour-bar-action:hover {
   color: var(--color-accent);
   text-decoration-color: var(--color-accent);
+}
+
+.tour-bar-sep {
+  color: rgba(247, 243, 236, 0.5);
+  user-select: none;
 }
 
 .tour-bar-cta {
@@ -426,7 +422,11 @@ button {
     display: none;
   }
 
-  .tour-bar-text {
+  /* On phones the tour bar gets cramped — keep just the number and
+     the call link, hide the Text action and separator. The Schedule
+     a Tour button is still on the right. */
+  .tour-bar-sep,
+  .tour-bar-action[href^="sms"] {
     display: none;
   }
 
@@ -1166,6 +1166,95 @@ button {
 
 .footer-list a:hover {
   color: #fff;
+}
+
+/* Phone rows shared by Footer and Contact page */
+.footer-phones,
+.contact-phones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.footer-phones li,
+.contact-phones li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1.4;
+}
+
+.phone-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.phone-number {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.phone-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  margin-top: 0.1rem;
+}
+
+.phone-actions a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.phone-sep {
+  opacity: 0.55;
+  user-select: none;
+}
+
+/* Footer-specific tints (dark background) */
+.footer .phone-label {
+  color: var(--color-meadow);
+  opacity: 1;
+}
+
+.footer .phone-number {
+  color: #fff;
+}
+
+.footer .phone-actions a {
+  color: #d5d0b8;
+  text-decoration-color: rgba(213, 208, 184, 0.5);
+}
+
+.footer .phone-actions a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+/* Contact page (light background) */
+.contact-info .phone-label {
+  color: var(--color-sage);
+}
+
+.contact-info .phone-number {
+  color: var(--color-primary);
+}
+
+.contact-info .phone-actions a {
+  color: var(--color-primary);
+  text-decoration-color: rgba(45, 74, 53, 0.4);
+}
+
+.contact-info .phone-actions a:hover {
+  color: var(--color-accent-dark);
+  text-decoration-color: var(--color-accent-dark);
 }
 
 .footer-bottom {
