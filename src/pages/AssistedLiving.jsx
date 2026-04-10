@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function AssistedLiving() {
+  usePageMeta({ title: 'Assisted Living', description: 'Assisted living in Spanish Fork, Utah with private apartments, kitchenettes, walk-in showers, daily activities, and around-the-clock care. Medicaid New Choice Waiver accepted.' })
   return (
     <>
       <section className="page-hero">

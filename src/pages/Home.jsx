@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Slideshow from '../components/Slideshow.jsx'
 import ContactForm from '../components/ContactForm.jsx'
+import usePageMeta from '../hooks/usePageMeta.js'
 
 const slideshowSlides = [
   { src: '/images/gallery/01-porch-mountain-view.jpg', alt: 'View of snow-capped Utah mountains framed by the Hearthstone Manor covered porch' },
@@ -125,6 +126,7 @@ const services = [
 ]
 
 export default function Home() {
+  usePageMeta({ title: 'Assisted Living & Memory Care in Spanish Fork, UT', description: 'Hearthstone Manor is a locally owned assisted living and memory care community in Spanish Fork, Utah. All-inclusive pricing, dedicated staff, and a home-style environment. Schedule a tour today.' })
   return (
     <>
       <section className="hero">

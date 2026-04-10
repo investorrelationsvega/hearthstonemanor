@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function MemoryCare() {
+  usePageMeta({ title: 'Memory Care', description: 'Compassionate memory care for loved ones with Alzheimer\'s, dementia, and memory loss in Spanish Fork, Utah. Trained staff, sensory activities, and 24/7 safety monitoring.' })
   return (
     <>
       <section className="page-hero">

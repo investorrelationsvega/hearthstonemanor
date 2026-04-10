@@ -53,7 +53,10 @@ function TagIcon() {
   )
 }
 
+import usePageMeta from '../hooks/usePageMeta.js'
+
 export default function WhyHearthstone() {
+  usePageMeta({ title: 'Why Hearthstone', description: 'Individual care, dedicated staff, and transparent all-inclusive pricing. Learn what makes Hearthstone Manor different from other assisted living facilities in Utah County.' })
   return (
     <>
       <section className="page-hero">

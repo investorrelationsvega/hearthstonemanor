@@ -1,6 +1,8 @@
 import ContactForm from '../components/ContactForm.jsx'
+import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function Contact() {
+  usePageMeta({ title: 'Contact Us', description: 'Contact Hearthstone Manor in Spanish Fork, Utah. Call, text, email, or send a message to schedule a tour of our assisted living and memory care community.' })
   return (
     <>
       <section className="page-hero">
