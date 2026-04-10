@@ -1518,13 +1518,13 @@ a.phone-number:hover {
 }
 
 .cta-band .contact-info .phone-actions a {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration-color: rgba(255, 255, 255, 0.35);
+  color: var(--color-accent);
+  text-decoration-color: rgba(200, 169, 110, 0.45);
 }
 
 .cta-band .contact-info .phone-actions a:hover {
-  color: var(--color-accent);
-  text-decoration-color: var(--color-accent);
+  color: #fff;
+  text-decoration-color: #fff;
 }
 
 .cta-band .contact-form label span {
