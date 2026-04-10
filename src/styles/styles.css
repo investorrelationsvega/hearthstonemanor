@@ -1640,6 +1640,20 @@ a.phone-number:hover {
     text-align: center;
   }
 
+  /* Flex containers inside the footer don't respond to text-align,
+     so they need explicit centering on stacked mobile layouts. */
+  .footer-phones li {
+    align-items: center;
+  }
+
+  .footer .phone-row {
+    justify-content: center;
+  }
+
+  .footer .phone-actions {
+    justify-content: center;
+  }
+
   .footer-brand {
     font-size: 2.1rem;
   }
