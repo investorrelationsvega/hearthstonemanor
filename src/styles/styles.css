@@ -1471,6 +1471,16 @@ a.phone-number:hover {
   color: var(--color-accent);
 }
 
+.footer .phone-actions a {
+  color: var(--color-accent);
+  text-decoration-color: rgba(200, 169, 110, 0.45);
+}
+
+.footer .phone-actions a:hover {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
 /* Contact page (light linen background) */
 .contact-info .phone-label {
   color: var(--color-sage);
