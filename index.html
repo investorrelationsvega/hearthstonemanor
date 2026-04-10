@@ -25,8 +25,16 @@
 
     <!-- Netlify Forms detection: this hidden static form lets Netlify's
          build-time bot discover the contact form even though the real form
-         is rendered by React at runtime. Do not remove. -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+         is rendered by React at runtime. There is also a standalone
+         /public/__forms.html as a backup. Do not remove. -->
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="name" />
       <input type="tel" name="phone" />
       <input type="email" name="email" />
