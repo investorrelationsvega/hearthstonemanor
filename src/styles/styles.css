@@ -540,7 +540,7 @@ button {
 }
 
 .nav-links a.active {
-  color: var(--color-sage);
+  color: var(--color-muted);  /* was sage (2.9:1 on linen), muted = 5.1:1 AA */
 }
 
 .nav-cta {
@@ -1167,6 +1167,9 @@ button {
   padding: 1.1rem 0 0;
 }
 
+/* Dots are visually 9px but padded to 44px tap target so Lighthouse
+   touch-target audit passes. The padding is transparent so the hit
+   area is generous without visual bloat. */
 .slideshow-dot {
   width: 9px;
   height: 9px;
@@ -1174,17 +1177,20 @@ button {
   background: rgba(122, 153, 112, 0.45);
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 18px;
+  background-clip: content-box;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .slideshow-dot:hover {
   background: var(--color-sage);
+  background-clip: content-box;
 }
 
 .slideshow-dot.is-active {
   background: var(--color-accent);
-  transform: scale(1.4);
+  background-clip: content-box;
+  transform: scale(1.3);
 }
 
 @media (max-width: 639px) {
@@ -1505,6 +1511,8 @@ a.phone-number:hover {
 .phone-actions a {
   text-decoration: underline;
   text-underline-offset: 3px;
+  padding: 0.5rem 0.25rem;  /* expands tap target to ~44px tall */
+  margin: -0.5rem -0.25rem; /* negates the visual padding so text stays in place */
 }
 
 .phone-actions > span[aria-hidden] {
@@ -1537,9 +1545,9 @@ a.phone-number:hover {
   text-decoration-color: #fff;
 }
 
-/* Contact page (light linen background) */
+/* Contact page + Home (light linen background) */
 .contact-info .phone-label {
-  color: var(--color-sage);
+  color: var(--color-muted);  /* was sage (2.9:1 on linen), muted = 5.1:1 AA */
 }
 
 .contact-info a.phone-number,
