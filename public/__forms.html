@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hearthstone Manor — Forms</title>
+  </head>
+  <body>
+    <!--
+      This standalone HTML file exists ONLY so Netlify's build-time
+      form parser can discover the contact form. The site is a React
+      SPA, so the real form is rendered at runtime by ContactForm.jsx
+      and won't be visible to Netlify's static HTML scanner. Netlify
+      scans every .html file in the publish directory at build time
+      and registers any form it finds with data-netlify="true".
+
+      The runtime React form POSTs to "/" with a hidden
+      <input name="form-name" value="contact"> field, which Netlify
+      uses to match the submission back to this static form
+      definition. Field names below MUST match the runtime form's
+      field names exactly.
+
+      Do not delete or rename this file.
+    -->
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
