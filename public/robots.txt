@@ -1,0 +1,7 @@
+# Hearthstone Manor — robots.txt
+# Allow all crawlers to index all pages.
+User-agent: *
+Allow: /
+
+# Sitemap location (helps Google discover all pages faster)
+Sitemap: https://www.hearthstonemanor.com/sitemap.xml
