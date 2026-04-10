@@ -1212,6 +1212,47 @@ button {
   gap: 2.5rem;
 }
 
+/* 3-item layout used on the Contact page. Desktop: phones + form
+   stack in the left column, map spans the full right column.
+   Mobile: phones → map → form (map moves up between them so
+   visitors see the address before scrolling to the form). */
+@media (min-width: 768px) {
+  .contact-grid-3col {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .contact-grid-3col .contact-phones-section {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contact-grid-3col .contact-form-section {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .contact-grid-3col .contact-map-section {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: start;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-grid-3col .contact-map-section {
+    order: 2;
+  }
+
+  .contact-grid-3col .contact-form-section {
+    order: 3;
+  }
+}
+
+.contact-map-section h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
 .contact-info h2 {
   margin-top: 1.75rem;
   font-size: 1.3rem;

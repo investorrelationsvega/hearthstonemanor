@@ -15,8 +15,8 @@ export default function Contact() {
       </section>
 
       <section className="section">
-        <div className="container contact-grid">
-          <div className="contact-info">
+        <div className="container contact-grid contact-grid-3col">
+          <div className="contact-phones-section contact-info">
             <h2>Get in Touch</h2>
             <ul className="contact-phones">
               <li>
@@ -45,12 +45,9 @@ export default function Contact() {
                 </a>
               </li>
             </ul>
-
-            <h2>Send a Message</h2>
-            <ContactForm />
           </div>
 
-          <div className="contact-map">
+          <div className="contact-map-section">
             <h2>Visit Us</h2>
             <address className="visit-us-address">
               1424 S 1700 E<br />
@@ -65,6 +62,11 @@ export default function Contact() {
                 allowFullScreen
               ></iframe>
             </div>
+          </div>
+
+          <div className="contact-form-section contact-info">
+            <h2>Send a Message</h2>
+            <ContactForm />
           </div>
         </div>
       </section>
