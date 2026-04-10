@@ -8,8 +8,15 @@ export default function Footer() {
           <span className="footer-brand">Hearthstone Manor</span>
           <p className="footer-tag">Come Home to Hearthstone.</p>
           <address className="footer-address">
-            1424 S 1700 E<br />
-            Spanish Fork, UT 84660
+            <a
+              href="https://maps.google.com/?q=1424+S+1700+E,+Spanish+Fork,+UT+84660"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open 1424 S 1700 E, Spanish Fork, UT 84660 in maps"
+            >
+              1424 S 1700 E<br />
+              Spanish Fork, UT 84660
+            </a>
           </address>
         </div>
 
