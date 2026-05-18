@@ -126,7 +126,7 @@ const services = [
 ]
 
 export default function Home() {
-  usePageMeta({ title: 'Assisted Living & Memory Care in Spanish Fork, UT', description: 'Hearthstone Manor is a locally owned assisted living and memory care community in Spanish Fork, Utah. All-inclusive pricing, dedicated staff, and a home-style environment. Schedule a tour today.' })
+  usePageMeta({ title: 'Assisted Living in Spanish Fork, UT', description: 'Hearthstone Manor is a locally owned assisted living community in Spanish Fork, Utah. All-inclusive pricing, dedicated staff, and a home-style environment. Schedule a tour today.' })
   return (
     <>
       <section className="hero">
@@ -141,7 +141,7 @@ export default function Home() {
           <div className="hero-content">
             <div className="container">
               <p className="eyebrow">Come Home to Hearthstone</p>
-              <h1>Assisted Living &amp; Memory Care That Feels Like Home</h1>
+              <h1>Assisted Living That Feels Like Home</h1>
               <p className="hero-sub">
                 Locally owned and all-inclusive. Welcoming families from Spanish Fork and anywhere you call home.
               </p>

@@ -28,7 +28,7 @@ export default function AboutUs() {
           </p>
 
           <p className="lede">
-            We offer both assisted living and memory care, with transparent
+            We offer assisted living with transparent
             pricing and a stable, dedicated staff. If you&rsquo;re exploring
             your options, we&rsquo;d love to show you around and answer any
             questions.

@@ -63,7 +63,7 @@ export default function WhyHearthstone() {
         <div className="container">
           <h1>The Hearthstone Advantage</h1>
           <p className="page-hero-sub">
-            Choosing the right assisted living or memory care community is one
+            Choosing the right assisted living community is one
             of the most important decisions your family will make. At
             Hearthstone Manor, we&rsquo;ve built everything around one idea:
             your loved one deserves to feel at home.

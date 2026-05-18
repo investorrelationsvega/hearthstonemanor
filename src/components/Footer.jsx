@@ -56,7 +56,6 @@ export default function Footer() {
           <ul className="footer-list">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/why-hearthstone">Why Hearthstone</Link></li>
-            <li><Link to="/memory-care">Memory Care</Link></li>
             <li><Link to="/assisted-living">Assisted Living</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>

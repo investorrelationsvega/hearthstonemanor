@@ -14,7 +14,7 @@ export default function usePageMeta({ title, description }) {
   const url = `https://www.hearthstonemanor.com${pathname}`
   const fullTitle = title
     ? `${title} | Hearthstone Manor`
-    : 'Hearthstone Manor | Assisted Living & Memory Care in Spanish Fork, UT'
+    : 'Hearthstone Manor | Assisted Living in Spanish Fork, UT'
 
   useEffect(() => {
     // <title>
