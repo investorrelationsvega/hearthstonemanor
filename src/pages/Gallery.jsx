@@ -26,18 +26,6 @@ const galleryGroups = [
       { src: '/images/gallery/12-dining-room.jpg', caption: 'Home-style dining room' },
       { src: '/images/activities/07-celebration-dining.jpg', caption: 'Birthdays and celebrations together' },
       { src: '/images/activities/05-sunlit-dining.jpg', caption: 'Sunlit social dining' },
-    ],
-  },
-  {
-    heading: 'Private Apartments',
-    items: [
-      { src: '/images/gallery/11-apartment.jpg', caption: 'A private furnished apartment' },
-      { src: '/images/gallery/10-kitchenette.jpg', caption: 'In-room kitchenette with custom wood cabinetry' },
-    ],
-  },
-  {
-    heading: 'Life at Hearthstone',
-    items: [
       { src: '/images/activities/01-chapel-services.jpg', caption: 'Religious services in the chapel' },
       { src: '/images/activities/03-chapel-gatherings.jpg', caption: 'Community gatherings' },
       { src: '/images/activities/08-music-room.jpg', caption: 'Music and devotionals' },
