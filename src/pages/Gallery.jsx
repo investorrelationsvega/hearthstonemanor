@@ -32,6 +32,13 @@ const galleryGroups = [
       { src: '/images/activities/02-sun-room-puzzles.jpg', caption: 'Puzzles and games in the sun room' },
     ],
   },
+  {
+    heading: 'Private Apartments',
+    items: [
+      { src: '/images/gallery/11-apartment.jpg', caption: 'A private furnished apartment' },
+      { src: '/images/gallery/10-kitchenette.jpg', caption: 'In-room kitchenette with custom wood cabinetry' },
+    ],
+  },
 ]
 
 import usePageMeta from '../hooks/usePageMeta.js'
