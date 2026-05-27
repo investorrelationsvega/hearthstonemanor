@@ -72,16 +72,12 @@ export default function Gallery() {
                   <figure
                     key={item.src}
                     className="gallery-item"
-                    tabIndex={0}
                   >
                     <img
                       src={item.src}
                       alt={item.caption}
                       loading="lazy"
                     />
-                    <figcaption className="gallery-caption">
-                      <span>{item.caption}</span>
-                    </figcaption>
                   </figure>
                 ))}
               </div>
