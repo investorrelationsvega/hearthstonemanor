@@ -6,6 +6,7 @@ import AssistedLiving from './pages/AssistedLiving.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Contact from './pages/Contact.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   )
