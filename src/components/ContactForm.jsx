@@ -2,9 +2,21 @@ import { useState } from 'react'
 
 const NETLIFY_FORM_URL = 'https://hearthstonemanor.netlify.app/'
 
+function formatPhone(value) {
+  const digits = value.replace(/\D/g, '').slice(0, 10)
+  if (digits.length <= 3) return digits.length ? `(${digits}` : ''
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+}
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
+  const [phone, setPhone] = useState('')
+
+  const handlePhoneChange = (e) => {
+    setPhone(formatPhone(e.target.value))
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -61,7 +73,17 @@ export default function ContactForm() {
 
       <label>
         <span>Phone</span>
-        <input type="tel" name="phone" required autoComplete="tel" />
+        <input
+          type="tel"
+          name="phone"
+          required
+          autoComplete="tel"
+          placeholder="(801) 555-1234"
+          value={phone}
+          onChange={handlePhoneChange}
+          pattern="\(\d{3}\) \d{3}-\d{4}"
+          title="10-digit phone number"
+        />
       </label>
 
       <label>
