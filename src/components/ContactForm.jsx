@@ -1,37 +1,30 @@
 import { useState } from 'react'
 
-/**
- * Reusable Netlify-Forms contact form. Used on the Home page Get in
- * Touch section and on the Contact page. Keeps a single source of
- * truth so the form schema, validation, and submission behavior stay
- * consistent in both places.
- */
+const NETLIFY_FORM_URL = 'https://hearthstonemanor.netlify.app/'
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
-
-  const encode = (data) =>
-    Object.keys(data)
-      .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
-      .join('&')
+  const [error, setError] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
-    const data = {
+    const formData = new URLSearchParams({
       'form-name': 'contact',
       name: form.name.value,
       phone: form.phone.value,
       email: form.email.value,
       message: form.message.value,
-    }
+    })
 
-    fetch('/', {
+    fetch(NETLIFY_FORM_URL, {
       method: 'POST',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(data),
+      body: formData.toString(),
     })
       .then(() => setSubmitted(true))
-      .catch(() => setSubmitted(true))
+      .catch(() => setError(true))
   }
 
   if (submitted) {
@@ -43,22 +36,23 @@ export default function ContactForm() {
     )
   }
 
+  if (error) {
+    return (
+      <div className="form-success" role="status" style={{ borderColor: '#c44', color: '#c44' }}>
+        <strong>Something went wrong.</strong> Please call us at (801) 798-1500
+        or email hsm.utah@gmail.com.
+      </div>
+    )
+  }
+
   return (
     <form
       className="contact-form"
-      name="contact"
+      action={NETLIFY_FORM_URL}
       method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
-      {/* Netlify needs these hidden fields */}
       <input type="hidden" name="form-name" value="contact" />
-      <p className="hp-field">
-        <label>
-          Don&rsquo;t fill this out: <input name="bot-field" />
-        </label>
-      </p>
 
       <label>
         <span>Name</span>
