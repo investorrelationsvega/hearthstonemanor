@@ -1,42 +1,38 @@
 import { useState } from 'react'
 
-const NETLIFY_FORM_URL = 'https://hearthstonemanor.netlify.app/'
-
-function formatPhone(value) {
-  const digits = value.replace(/\D/g, '').slice(0, 10)
-  if (digits.length <= 3) return digits.length ? `(${digits}` : ''
-  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
-  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
-}
-
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [phone, setPhone] = useState('')
 
+  function formatPhone(value) {
+    const digits = value.replace(/\D/g, '').slice(0, 10)
+    if (digits.length <= 3) return digits.length ? `(${digits}` : ''
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+  }
+
   const handlePhoneChange = (e) => {
     setPhone(formatPhone(e.target.value))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const form = e.target
-    const formData = new URLSearchParams({
-      'form-name': 'contact',
-      name: form.name.value,
-      phone: form.phone.value,
-      email: form.email.value,
-      message: form.message.value,
-    })
-
-    fetch(NETLIFY_FORM_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData.toString(),
-    })
-      .then(() => setSubmitted(true))
-      .catch(() => setError(true))
+    try {
+      const payload = Object.fromEntries(new FormData(e.target))
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    }
   }
 
   if (submitted) {
@@ -60,11 +56,14 @@ export default function ContactForm() {
   return (
     <form
       className="contact-form"
-      action={NETLIFY_FORM_URL}
-      method="POST"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact" />
+      {/* Honeypot — bots fill this, humans don't see it */}
+      <p className="hp-field">
+        <label>
+          Company <input type="text" name="company" autoComplete="off" tabIndex={-1} />
+        </label>
+      </p>
 
       <label>
         <span>Name</span>
