@@ -51,7 +51,7 @@ export default function ContactForm() {
   if (error) {
     return (
       <div className="form-success" role="status" style={{ borderColor: '#c44', color: '#c44' }}>
-        <strong>Something went wrong.</strong> Please call us at (801) 798-1500
+        <strong>Something went wrong.</strong> Please call us at (801) 606-3388
         or email hsm.utah@gmail.com.
       </div>
     )

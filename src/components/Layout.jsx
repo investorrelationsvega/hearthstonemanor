@@ -20,19 +20,19 @@ export default function Layout() {
         <div className="tour-bar-inner">
           <span className="tour-bar-message">
             <strong>Schedule a tour:</strong>
-            <span className="tour-bar-number">(801) 798-1500</span>
+            <span className="tour-bar-number">(801) 606-3388</span>
             <a
-              href="tel:+18017981500"
+              href="tel:+18016063388"
               className="tour-bar-action"
-              aria-label="Call the facility at (801) 798-1500"
+              aria-label="Call the facility at (801) 606-3388"
             >
               Call us
             </a>
             <span className="tour-bar-sep" aria-hidden="true">·</span>
             <a
-              href="sms:+18017981500"
+              href="sms:+18016063388"
               className="tour-bar-action"
-              aria-label="Text the facility at (801) 798-1500"
+              aria-label="Text the facility at (801) 606-3388"
             >
               Text us
             </a>

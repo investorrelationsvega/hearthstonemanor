@@ -26,19 +26,11 @@ export default function Footer() {
             <li>
               <span className="phone-label">Call / Text Us</span>
               <div className="phone-row">
-                <span className="phone-number">(801) 798-1500</span>
+                <span className="phone-number">(801) 606-3388</span>
                 <span className="phone-actions">
-                  <a href="tel:+18017981500" aria-label="Call (801) 798-1500">Call</a>
+                  <a href="tel:+18016063388" aria-label="Call (801) 606-3388">Call</a>
                   <span aria-hidden="true">·</span>
-                  <a href="sms:+18017981500" aria-label="Text (801) 798-1500">Text</a>
-                </span>
-              </div>
-              <div className="phone-row">
-                <span className="phone-number">(801) 420-5196</span>
-                <span className="phone-actions">
-                  <a href="tel:+18014205196" aria-label="Call (801) 420-5196">Call</a>
-                  <span aria-hidden="true">·</span>
-                  <a href="sms:+18014205196" aria-label="Text (801) 420-5196">Text</a>
+                  <a href="sms:+18016063388" aria-label="Text (801) 606-3388">Text</a>
                 </span>
               </div>
             </li>
