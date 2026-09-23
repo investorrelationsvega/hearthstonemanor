@@ -1425,6 +1425,34 @@ button {
   text-decoration-color: #fff;
 }
 
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d5d0b8;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.footer-social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
 .footer-list {
   line-height: 1.9;
 }
