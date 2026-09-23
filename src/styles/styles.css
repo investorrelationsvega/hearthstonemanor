@@ -1453,6 +1453,18 @@ button {
   height: 20px;
 }
 
+.contact-facebook {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.contact-facebook-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .footer-list {
   line-height: 1.9;
 }
