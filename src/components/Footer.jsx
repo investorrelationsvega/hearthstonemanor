@@ -62,6 +62,7 @@ export default function Footer() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/why-hearthstone">Why Hearthstone</Link></li>
             <li><Link to="/assisted-living">Assisted Living</Link></li>
+            <li><Link to="/memory-care">Memory Care</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/contact">Contact</Link></li>
@@ -70,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Hearthstone Manor. All rights reserved.</p>
+        <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Hearthstone Manor. All rights reserved.</p>
       </div>
     </footer>
   )

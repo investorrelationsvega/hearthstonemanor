@@ -28,6 +28,25 @@ npm run build     # production build into dist/
 npm run preview   # preview the production build locally
 ```
 
+## Build and prerendering
+
+`npm run build` does three things:
+
+1. `vite build` builds the client bundle into `dist/`.
+2. `vite build --ssr src/entry-server.jsx --outDir dist-ssr` builds a
+   server copy of the app.
+3. `node scripts/prerender.js` renders every route in
+   `src/entry-server.jsx` (`routes`) to static HTML, with the right
+   per-page `<title>`, description, canonical, Open Graph, and robots tags
+   taken from each page's `usePageMeta` call. Files are written as
+   `dist/<route>.html` (Cloudflare Pages serves them at `/<route>`), plus
+   `dist/404.html` (noindex). `dist-ssr/` is deleted afterward.
+
+`src/main.jsx` hydrates the prerendered markup when it matches the current
+URL and falls back to a normal client render otherwise. When adding a page,
+add its route to `App.jsx`, `routes` in `src/entry-server.jsx`, and
+`public/sitemap.xml`.
+
 ## Project structure
 
 ```

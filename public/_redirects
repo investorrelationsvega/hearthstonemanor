@@ -1,1 +1,13 @@
+# Cloudflare Pages redirects. Rules are matched top to bottom; first match wins.
+
+# Old WordPress URLs still in search indexes (301 = permanent)
+/index.php/packages/      /assisted-living  301
+/index.php/packages       /assisted-living  301
+/index.php/about-us/      /about            301
+/index.php/about-us       /about            301
+/index.php/*              /                 301
+/index.php                /                 301
+
+# SPA fallback. Prerendered pages (e.g. about.html) are static assets and
+# are served before this rule; it only catches paths with no file. Keep last.
 /*    /index.html   200

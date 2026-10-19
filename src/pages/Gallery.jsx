@@ -44,7 +44,7 @@ const galleryGroups = [
 import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function Gallery() {
-  usePageMeta({ title: 'Gallery', description: 'Take a look inside Hearthstone Manor. Photos of our common areas, private apartments, outdoor spaces, chapel, and daily life at our Spanish Fork assisted living community.' })
+  usePageMeta({ title: 'Gallery', description: 'Take a look inside Hearthstone Manor. Photos of our common areas, private apartments, outdoor spaces, chapel, and daily life at our Spanish Fork assisted living and memory care community.' })
   return (
     <>
       <section className="page-hero">

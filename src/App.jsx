@@ -3,6 +3,7 @@ import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import WhyHearthstone from './pages/WhyHearthstone.jsx'
 import AssistedLiving from './pages/AssistedLiving.jsx'
+import MemoryCare from './pages/MemoryCare.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Contact from './pages/Contact.jsx'
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/why-hearthstone" element={<WhyHearthstone />} />
         <Route path="/assisted-living" element={<AssistedLiving />} />
+        <Route path="/memory-care" element={<MemoryCare />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />

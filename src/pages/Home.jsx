@@ -126,7 +126,7 @@ const services = [
 ]
 
 export default function Home() {
-  usePageMeta({ title: 'Assisted Living in Spanish Fork, UT', description: 'Hearthstone Manor is a locally owned assisted living community in Spanish Fork, Utah. All-inclusive pricing, dedicated staff, and a home-style environment. Schedule a tour today.' })
+  usePageMeta({ title: 'Assisted Living & Memory Care in Spanish Fork, UT', description: 'Hearthstone Manor is a locally owned assisted living and memory care community in Spanish Fork, Utah, with a separate, secure memory care wing, dedicated staff, and a home-style environment. Schedule a tour today.' })
   return (
     <>
       <section className="hero">
@@ -141,9 +141,9 @@ export default function Home() {
           <div className="hero-content">
             <div className="container">
               <p className="eyebrow">Come Home to Hearthstone</p>
-              <h1>Assisted Living That Feels Like Home</h1>
+              <h1>Assisted Living &amp; Memory Care That Feels Like Home</h1>
               <p className="hero-sub">
-                Locally owned and all-inclusive. Welcoming families from Spanish Fork and anywhere you call home.
+                Locally owned assisted living and secure memory care. Welcoming families from Spanish Fork and anywhere you call home.
               </p>
               <div className="hero-actions">
                 <Link to="/contact" className="btn btn-primary">Schedule a Tour</Link>
@@ -174,6 +174,41 @@ export default function Home() {
 
       <section className="section section-alt">
         <div className="container">
+          <h2 className="section-title center">Two Levels of Care, One Hearthstone Home</h2>
+          <p className="section-sub center">
+            Assisted living and memory care in one locally owned Spanish Fork community.
+          </p>
+          <div className="two-col">
+            <article className="pillar">
+              <h3>Assisted Living</h3>
+              <p>
+                A private apartment, help with the daily routines that have
+                become harder, medication reminders, and home-cooked meals,
+                with caregivers available around the clock. Independence,
+                with a helping hand nearby.
+              </p>
+              <Link to="/assisted-living" className="btn btn-ghost btn-ghost-dark">
+                Explore Assisted Living
+              </Link>
+            </article>
+            <article className="pillar">
+              <h3>Memory Care</h3>
+              <p>
+                A separate, secure wing for loved ones living with
+                Alzheimer&rsquo;s or other forms of dementia. Caregivers learn
+                each resident&rsquo;s routines and preferences and watch over
+                them day and night, so families can rest a little easier.
+              </p>
+              <Link to="/memory-care" className="btn btn-ghost btn-ghost-dark">
+                Explore Memory Care
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <h2 className="section-title center">All-Inclusive Services</h2>
           <p className="section-sub center">
             One straightforward price covers everything your loved one needs.
@@ -200,7 +235,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container">
           <h2 className="section-title center">A Glimpse of Life at Hearthstone</h2>
           <p className="section-sub center">

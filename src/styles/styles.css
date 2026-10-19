@@ -849,6 +849,30 @@ button {
   gap: 1.5rem;
 }
 
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.two-col .pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.two-col .pillar h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6em;
+}
+
+.two-col .pillar p {
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
 .pillar {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1802,6 +1826,10 @@ a.phone-number:hover {
 @media (min-width: 768px) {
   .three-col {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .two-col {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-grid {

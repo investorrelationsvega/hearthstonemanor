@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function NotFound() {
+  usePageMeta({ title: 'Page Not Found', description: 'The page you are looking for could not be found. Visit Hearthstone Manor, assisted living and memory care in Spanish Fork, Utah.', noindex: true })
   return (
     <>
       <section className="page-hero">

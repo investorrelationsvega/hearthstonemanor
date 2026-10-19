@@ -56,14 +56,14 @@ function TagIcon() {
 import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function WhyHearthstone() {
-  usePageMeta({ title: 'Why Hearthstone', description: 'Individual care, dedicated staff, and transparent all-inclusive pricing. Learn what makes Hearthstone Manor different from other assisted living facilities in Utah County.' })
+  usePageMeta({ title: 'Why Hearthstone', description: 'Individual care, dedicated staff, and transparent all-inclusive pricing. Learn what makes Hearthstone Manor different from other assisted living and memory care communities in Utah County.' })
   return (
     <>
       <section className="page-hero">
         <div className="container">
           <h1>The Hearthstone Advantage</h1>
           <p className="page-hero-sub">
-            Choosing the right assisted living community is one
+            Choosing the right assisted living or memory care community is one
             of the most important decisions your family will make. At
             Hearthstone Manor, we&rsquo;ve built everything around one idea:
             your loved one deserves to feel at home.

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import usePageMeta from '../hooks/usePageMeta.js'
 
 export default function AssistedLiving() {
-  usePageMeta({ title: 'Assisted Living', description: 'Assisted living in Spanish Fork, Utah with private apartments, kitchenettes, walk-in showers, daily activities, and around-the-clock care. Medicaid New Choice Waiver accepted.' })
+  usePageMeta({ title: 'Assisted Living', description: 'Assisted living in Spanish Fork, Utah with private apartments, kitchenettes, walk-in showers, daily activities, and around-the-clock care. Secure memory care on site. Medicaid New Choice Waiver accepted.' })
   return (
     <>
       <section className="page-hero">
@@ -34,6 +34,13 @@ export default function AssistedLiving() {
             Wasatch Mountains right out the window. We host engaging daily
             activities and partner with local church volunteers to provide
             regular religious services and programs for those who want them.
+          </p>
+
+          <p className="lede">
+            Hearthstone Manor also offers memory care in a separate, secure
+            wing for residents living with Alzheimer&rsquo;s or other forms of
+            dementia. If memory loss is part of your family&rsquo;s story,{' '}
+            <Link to="/memory-care">learn more about memory care</Link>.
           </p>
 
           <p className="lede">

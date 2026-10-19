@@ -5,6 +5,7 @@ const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/why-hearthstone', label: 'Why Hearthstone' },
   { to: '/assisted-living', label: 'Assisted Living' },
+  { to: '/memory-care', label: 'Memory Care' },
   { to: '/about', label: 'About Us' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/contact', label: 'Contact' },
